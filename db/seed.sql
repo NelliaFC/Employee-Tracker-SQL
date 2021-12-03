@@ -2,6 +2,7 @@
 
 INSERT INTO department
     (name)
+
 VALUES
     ('Creative'),
     ('Engineering'),

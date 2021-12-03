@@ -9,6 +9,7 @@ findAllEmployees() {
 
   //Find all employees without ID from
   // Find all employees except the given employee id
+  
   findAllPossibleManagers(employeeId) {
     return this.connection.promise().query(
       "SELECT id, first_name, last_name FROM employee WHERE id != ?",

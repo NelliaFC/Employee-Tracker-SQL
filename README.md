@@ -30,5 +30,8 @@ SO THAT I can organize and plan my business
 * [console.table package](https://www.npmjs.com/package/console.table) to print MySQL rows to the console.
 
 ![Database Demo](./lib/dataandtables.png)
+![Database Demo](./lib/EmployeeT.png)
+![Database Demo](./lib/mysql.png)
+
 
 
