@@ -25,7 +25,9 @@ SO THAT I can organize and plan my business
 * THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
 
 #  Must Install 
-[MySQL2 package](https://www.npmjs.com/package/mysql2) to connect to your MySQL database and perform queries, the [Inquirer package](https://www.npmjs.com/package/inquirer) to interact with the user via the command-line, and the [console.table package](https://www.npmjs.com/package/console.table) to print MySQL rows to the console.
+* [MySQL2 package](https://www.npmjs.com/package/mysql2) to connect to your MySQL database and perform queries. 
+* [Inquirer package](https://www.npmjs.com/package/inquirer) to interact with the user via the command-line.
+* [console.table package](https://www.npmjs.com/package/console.table) to print MySQL rows to the console.
 
 ![Database Demo](./lib/dataandtables.png)
 
