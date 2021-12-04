@@ -147,3 +147,16 @@ function viewEmployees() {
     })
     .then(() => loadMainPrompts());
 }
+
+
+
+
+
+
+
+//To quit application
+
+function quit() {
+  console.log("Goodbye!");
+  process.exit();
+}

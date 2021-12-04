@@ -23,6 +23,30 @@ findAllEmployees() {
     );
   }
 
+  //Find all roles 
+  findAllRoles() {
+    return this.connection.promise().query(
+      "SELECT role.id, role.title, department.name AS department, role.salary FROM role LEFT JOIN department on role.department_id = department.id;"
+    );
+  }
+
+  // Create a new role
+  createRole(role) {
+    return this.connection.promise().query("INSERT INTO role SET ?", role);
+  }
+
+  // Remove a role
+  removeRole(roleId) {
+    return this.connection.promise().query("DELETE FROM role WHERE id = ?", roleId);
+  }
+
+  // Find all departments
+  findAllDepartments() {
+    return this.connection.promise().query(
+      "SELECT department.id, department.name FROM department;"
+    );
+  }
+
   // Create a new employee
   createEmployee(employee) {
     return this.connection.promise().query("INSERT INTO employee SET ?", employee);
@@ -36,6 +60,13 @@ findAllEmployees() {
     );
   };
 
+  //Update Managers
+  updateEmployeeManager(employeeId, managerId) {
+    return this.connection.promise().query(
+      "UPDATE employee SET manager_id = ? WHERE id = ?",
+      [managerId, employeeId]
+    );
+  }
   
 
 
