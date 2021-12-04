@@ -150,7 +150,7 @@ function viewEmployees() {
 
 function viewEmployeesByDepartment() {
   db.findAllDepartments()
-    .then(([rowgit]) => {
+    .then(([rows]) => {
       let departments = rows;
       const departmentChoices = departments.map(({ id, name }) => ({
         name: name,
@@ -165,7 +165,7 @@ function viewEmployeesByDepartment() {
           choices: departmentChoices
         }
       ])
-        .then(res => db.findAllEmployeesByDepartmen(res.departmentId))
+        .then(res => db.findAllEmployeesByDepartment(res.departmentId))
         .then(([rows]) => {
           let employees = rows;
           console.log("\n");
@@ -198,7 +198,7 @@ function viewEmployeesByManager() {
           let employees = rows;
           console.log("\n");
           if (employees.length === 0) {
-            
+            console.log("The selected employee has no direct reports");
           } else {
             console.table(employees);
           }
